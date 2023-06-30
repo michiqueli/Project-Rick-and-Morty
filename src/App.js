@@ -1,12 +1,12 @@
 import styles from './App.module.css'
 import Cards from './components/Cards/Cards.jsx';
-import SearchBar from './components/SearchBar/SearchBar.jsx';
 import characters from './data.js';
+import Nav from './components/Nav/Nav.jsx';
 
 function App() {
    return (
       <div className={styles.app}>
-         <SearchBar onSearch={(characterID) => window.alert(characterID)} />
+         <Nav></Nav>
          <Cards characters={characters}/>
       </div>
    );
