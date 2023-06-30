@@ -11,7 +11,7 @@ export default function Cards({characters}) {
          gender = {char.gender}
          origin = {char.origin}
          image = {char.image}
-         onClose = {char.onClose}
+         onClose={() => window.alert('Emulamos que se cierra la card')}
       />
       ))
    }</div>;

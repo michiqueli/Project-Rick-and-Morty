@@ -1,7 +1,7 @@
 import styles from './App.module.css'
 import Cards from './components/Cards/Cards.jsx';
 import characters from './data.js';
-import Nav from './components/Nav/Nav.jsx';
+import Nav from './components/Nav/nav.jsx';
 
 function App() {
    return (
@@ -11,5 +11,4 @@ function App() {
       </div>
    );
 }
-
 export default App;

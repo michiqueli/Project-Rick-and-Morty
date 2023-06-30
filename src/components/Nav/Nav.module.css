@@ -1,0 +1,9 @@
+.container{
+background-color: transparent;
+display: flex;
+height: max-content;
+width: 95%;
+flex-direction: row;
+justify-content: flex-end;
+padding: 10px;
+}
