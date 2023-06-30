@@ -1,0 +1,25 @@
+.container{
+    background-color: rgb(53, 176, 237);
+    display: grid;
+    grid-template-columns: 60% auto;
+    padding: 10px;
+    margin-left: 40%;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.btn{
+    grid-column: 2 / 3;
+    background-color: rgb(106, 167, 198);
+    width: 95px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: medium;
+    margin-left: 20px;
+}
+
+.in{
+    background-color: rgb(200, 237, 242);
+    border-radius: 10px;
+    text-align: center;
+}
