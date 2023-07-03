@@ -1,8 +1,8 @@
 import SearchBar from "../SearchBar/SearchBar.jsx"
 import style from "./Nav.module.css"
 
-export default function Nav (){
+export default function Nav ({onSearch}){
     return <nav className={style.container}>
-        <SearchBar onSearch={(characterID) => window.alert(characterID)}/>
+        <SearchBar onSearch = {onSearch}/>
     </nav>
 }
