@@ -1,7 +1,7 @@
-import styles from './App.module.css'
 import Cards from './components/Cards/Cards.jsx';
-import characters from './data.js';
 import Nav from './components/Nav/Nav.jsx';
+import styles from './App.module.css'
+import characters from './data.js';
 
 function App() {
    return (
