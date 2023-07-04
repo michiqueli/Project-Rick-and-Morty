@@ -15,6 +15,16 @@
     margin-left: 20px;
 }
 
+.btnRdm{
+    grid-column: 2 / 3;
+    background-color: rgb(106, 167, 198);
+    width: 95px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: medium;
+    margin-left: 20px;
+}
+
 .in{
     background-color: rgb(200, 237, 242);
     border-radius: 10px;

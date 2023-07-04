@@ -6,15 +6,17 @@ import axios from 'axios';
 
 function App() {
    const [characters, setCharacters] = useState([]);
-   function onSearch(id){
+   const onSearch = (id) =>{
+      if(!!characters.find((character) => character.id == id))
+      return window.alert("Esa Carta ya fue Agregada")
       axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
       if (data.name) {
          setCharacters((characters) => [...characters, data]);
       } else {
          window.alert('¡No hay personajes con este ID!');
       }
-      });
-   }
+   });
+}
    const onClose = (id) => {
       setCharacters(characters.filter((characters) => characters.id !== id))
    }
