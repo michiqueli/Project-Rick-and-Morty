@@ -12,6 +12,7 @@ export default function Cards({characters, onClose}) {
          origin = {char.origin}
          image = {char.image}
          onClose = {() => onClose (char.id)}
+         id = {char.id}
       />
       ))
    }</div>;

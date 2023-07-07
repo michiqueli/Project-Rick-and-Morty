@@ -8,17 +8,6 @@ import styles from './App.module.css'
 import {useState} from 'react';
 import axios from 'axios';
 import {Route, Routes} from 'react-router-dom'
-
-<Routes>
-  <Route path= '/Home' component={Nav}/>
-  <Route path= '/Home' component={App}/>
-  <Route path= '/Home' component={Cards}/>
-  <Route path='/About' component={About}/>
-  <Route path='/About' component={Nav}/>
-  <Route path='/Details' component={Details}/>
-  <Route path='/Details' component={Nav}/>
-  </Routes>
-
 function App() {
    const [characters, setCharacters] = useState([]);
    const onSearch = (id) =>{
@@ -38,7 +27,11 @@ function App() {
    return (
       <div className={styles.app}>
          <Nav onSearch = {onSearch}></Nav>
-         <Cards characters={characters} onClose={onClose}/>
+         <Routes>
+         <Route path = '/home' element = {<Cards characters={characters} onClose={onClose}/>}/>
+         <Route path = '/about' element ={<About/>}/>
+         <Route path = '/detail/:id' element = {<Details/>}/>
+         </Routes>
       </div>
    );
 }

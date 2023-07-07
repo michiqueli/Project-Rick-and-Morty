@@ -6,8 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url('../img/fondo.gif');
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat:no-repeat;
 }
 
 code {
