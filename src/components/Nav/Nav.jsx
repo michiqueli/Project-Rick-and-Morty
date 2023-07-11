@@ -1,6 +1,6 @@
 import SearchBar from "../SearchBar/SearchBar.jsx"
 import style from "./Nav.module.css"
-import { Link, useHref } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function Nav ({onSearch}){
     return (
