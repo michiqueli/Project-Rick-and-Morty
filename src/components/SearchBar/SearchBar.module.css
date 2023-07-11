@@ -3,6 +3,8 @@
     background-color: transparent;
     width: max-content;
     height: max-content;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .btn{

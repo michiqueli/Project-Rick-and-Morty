@@ -10,8 +10,10 @@ export default function About() {
             <h2 className={style.h2}>
             Henry studen since May 2023
             </h2>
-            <h2>
+            <h2 className={style.h2}>
             M1 Aproved
+            </h2 >
+            <h2 className={style.h2}>
             M2 On Board
             </h2>        
         </div>
