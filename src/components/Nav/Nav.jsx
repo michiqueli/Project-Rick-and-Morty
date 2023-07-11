@@ -7,7 +7,7 @@ export default function Nav ({onSearch}){
         <div className={style.navBar}>
         <div className={style.container}>
         <Link to ='./About'><button className={style.about} >About</button></Link>
-        < Link to ='./Home'><button className={style.home}>Home</button></Link>
+        <Link to ='./Home'><button className={style.home}>Home</button></Link>
         <SearchBar onSearch = {onSearch}></SearchBar>
         </div>
         </div>

@@ -4,10 +4,10 @@ export default function Card({onClose, name, status, species, gender, origin, im
    return (
       <div className={style.container} style={{ backgroundImage: `url(${image})` }}>
          <button className={style.button}onClick={onClose}>X</button>
-         <Link to = {`/detail/${id}`} className={style.link}></Link>
          <div className={style.name}>{name}</div>
-         <div className={style.species}>{species}</div>
-         <div className={style.gender}>{gender}</div>
+         <div className={style.Details}>
+         <Link to = {`/detail/${id}`}><button className={style.btnDet}>Details</button></Link>
+         </div>
       </div>
    );
 }
