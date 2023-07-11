@@ -23,13 +23,13 @@ export default function Details(){
         <div>{
             character.name &&  
             <div className = {style.container}>
-                    <h2 className={style.h2}>{character.name}</h2>
-                    <h1 className={style.h1}><b>Status:</b>{character.status}</h1>
-                    <h1 className={style.h1}><b>Species:</b>{character.species}</h1>
-                    <h1 className={style.h1}><b>Species:</b>{character.species}</h1>
-                    <h1 className={style.h1}><b>Gender:</b>{character.gender}</h1>
-                    <h1 className={style.h1}><b>Origin:</b>{character.origin.name}</h1>
-                    <img src={character.image} alt='Imsage Not Found' />
+                    <div className={style.title}>{character.name}</div>
+                    <div className={style.img}><img src={character.image} alt='Imsage Not Found'></img></div>
+                    <div className={style.stats}><b>Status:</b>{character.status}</div>
+                    <div className={style.stats}><b>Species:</b>{character.species}</div>
+                    <div className={style.stats}><b>Species:</b>{character.species}</div>
+                    <div className={style.stats}><b>Gender:</b>{character.gender}</div>
+                    <div className={style.stats}><b>Origin:</b>{character.origin.name}</div>
                     
             </div>
             }
