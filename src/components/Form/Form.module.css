@@ -6,7 +6,7 @@
     flex-direction: column;
 }
 
-.container{
+.containerOk{
     display: grid;
     margin-top: 40px;
     width: 300px;
@@ -22,7 +22,23 @@
     align-self: center;
 }
 
-.userName{
+.containerNot{
+    display: grid;
+    margin-top: 40px;
+    width: 300px;
+    height: 500px;
+    border: 2px solid rgb(246, 1, 1);
+    border-radius: 10px;
+    grid-template-rows: 40% 40% 20%;
+    box-shadow: 0px 0px 20px 10px rgb(246, 1, 1);
+    background-image: url('./Login.jpg');
+    background-repeat:round;
+    color: white;
+    justify-self: center;
+    align-self: center;
+}
+
+.emailOk{
     grid-row: 1 / 2;
     display: flex;
     flex-direction: column;
@@ -40,7 +56,25 @@
     text-shadow: 10px 10px 10px 10px;  
 }
 
-.pass{
+.emailNot{
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    font-size: x-large;
+    border: 2px solid rgb(246, 1, 1);
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 10px rgb(246, 1, 1);
+    color: rgb(238, 0, 255);
+    text-shadow: 10px 10px 10px 10px;  
+}
+
+.passOk{
     grid-row: 2 / 3;
     display: flex;
     flex-direction: column;
@@ -57,6 +91,24 @@
     box-shadow: 0px 0px 20px 10px rgb(55, 255, 0);
     color: rgb(238, 0, 255);
 }
+
+.passNot{
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    height:max-content ;
+    margin-top: 20px;
+    justify-self: center;
+    font-size: x-large;
+    border: 2px solid rgb(246, 1, 1);
+    width: max-content;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 10px rgb(246, 1, 1);
+    color: rgb(238, 0, 255);
+}
 .login{
     grid-row: 3 / 4;
     background-color: transparent;
@@ -66,7 +118,7 @@
     justify-self: center;
 }
 
-.btn{
+.btnOk{
     align-self: center;
     justify-self: center;
     width: 150px;
@@ -76,6 +128,17 @@
     border: 2px solid rgb(54, 246, 1);
     border-radius: 10px;
     box-shadow: 0px 0px 20px 10px rgb(55, 255, 0);
+}
+.btnNot{
+    align-self: center;
+    justify-self: center;
+    width: 150px;
+    height: 30px;
+    color: rgb(255, 0, 0);
+    background-color: black;
+    border: 2px solid rgb(246, 1, 1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 10px rgb(255, 0, 0);
 }
 
 .title{
