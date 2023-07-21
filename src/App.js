@@ -3,6 +3,7 @@ import Nav from './components/Nav/Nav';
 import About from './components/About/About';
 import Details from './components/Details/Details';
 import Form from './components/Form/Form';
+import Favourites from './components/Favourites/Favourites';
 
 import styles from './App.module.css';
 
@@ -55,6 +56,7 @@ function App() {
                <Route path = '/home' element = {<Cards characters={characters} onClose={onClose}/>}/>
                <Route path = '/about' element ={<About/>}/>
                <Route path = '/detail/:id' element = {<Details/>}/>
+               <Route path = '/favourites' element = {<Favourites/>}/>
             </Routes>
          </div>
       )
