@@ -34,7 +34,7 @@ function App() {
       },[access, navigate]);
    
    const onSearch = (id) =>{
-      if(!!characters.find((character) => character.id === id))
+      if(!!characters.find((character) => character.id == id))
          return window.alert("Esa Carta ya fue Agregada")
       axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
          if (data.name) {
