@@ -31,12 +31,12 @@ function App() {
    
    useEffect (() => {
       !access && navigate('/');
-      },[access]);
+      },[access, navigate]);
    
    const onSearch = (id) =>{
-      if(!!characters.find((character) => character.id == id))
+      if(!!characters.find((character) => character.id === id))
          return window.alert("Esa Carta ya fue Agregada")
-      axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+      axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
          if (data.name) {
             setCharacters((characters) => [...characters, data]);
          } else {
