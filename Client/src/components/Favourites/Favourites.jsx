@@ -1,24 +1,61 @@
-import React from 'react'
-import style from './Favourites.module.css'
-import {connect} from 'react-redux'
-import Card from '../Card/Card'
+import Card from '../Card/Card';
+import { connect, useDispatch } from "react-redux"
+import style from "./Favourites.module.css"
+import { filterFav, orderFav } from '../../Redux/actions';
+import { useState } from 'react';
 
 function Favourites({myFavourites}) {
+    const [aux,setAux]=useState(false)
+
+    const dispatch= useDispatch()
+  
+    const handleOrder=(e)=>{
+      dispatch(orderFav(e.target.value))
+      setAux(!aux)
+    }
+    const handleFilter=(e)=>{
+      dispatch(filterFav(e.target.value))
+    }
     return (
-        <><h2> Favourites</h2><div className={style.container}>
-            {myFavourites?.map(({ name, image, id, addFav, removeFav, onFavourites, myFavourites }) => (
+        <>
+        <div className={style.favBar}>
+            <div className={style.filters}>
+            
+                <select className={style.selectors} onChange={handleOrder}>
+                    <option value="A">Ascendente</option>
+                    <option value="D">Descendente</option>
+                </select>
+            <div className={style.tit}>
+                Filters
+            </div>
+                <select className={style.selectors} onChange={handleFilter}>
+                    <option value="All">All</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Genderless">Genderless</option>
+                    <option value="unknown">unknown</option>
+                </select>
+            </div>
+        </div><>
+    <h1> Favourites</h1>
+    <div className={style.container}>
+            {myFavourites?.map((fav) => (
                 <Card
-                    key={id}
-                    id={id}
-                    name={name}
-                    image={image}/>
-            ))}</div></>
+                    key={fav.id}
+                    id={fav.id}
+                    name={fav.name}
+                    image={fav.image}
+                    species={fav.species}
+                    gender={fav.gender}
+                    origin={fav.origin}
+                    />
+            ))}</div></></>
     )
 }
 
-export function mapStateToProps(state){
+export function mapStateToProps(isFav){
     return{
-        myFavourites: state.myFavourites
+        myFavourites: isFav.myFavourites
     }
 }
 
