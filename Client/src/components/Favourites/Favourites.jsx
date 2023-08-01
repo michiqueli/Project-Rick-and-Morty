@@ -48,6 +48,7 @@ function Favourites({myFavourites}) {
                     species={fav.species}
                     gender={fav.gender}
                     origin={fav.origin}
+                    onClose={fav.onClose}
                     />
             ))}</div></></>
     )
