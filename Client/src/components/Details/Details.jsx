@@ -29,7 +29,7 @@ export default function Details(){
                     <div className={style.stats}><b>Species:</b>{character.species}</div>
                     <div className={style.stats}><b>Species:</b>{character.species}</div>
                     <div className={style.stats}><b>Gender:</b>{character.gender}</div>
-                    <div className={style.stats}><b>Origin:</b>{character.origin.name}</div>
+                    <div className={style.stats}><b>Origin:</b>{character.origin}</div>
                     
             </div>
             }
