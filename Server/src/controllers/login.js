@@ -1,6 +1,6 @@
 const users = require ("../utils/users")
 
-const login = (req, res =>{
+const login = ((req, res) =>{
     const loger = {
         email: req.query.email, 
         password: req.query.password
@@ -13,6 +13,4 @@ const login = (req, res =>{
     }   
 })
 
-module.exports = {
-    login
-}
+module.exports = login

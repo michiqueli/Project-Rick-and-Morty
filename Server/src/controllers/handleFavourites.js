@@ -10,3 +10,7 @@ const deleteFav = (req, res) => {
     myFavourites.filter(fav => fav.id == id)
     res(200, json(myFavourites))
 }
+
+module.exports = {
+    postFav, deleteFav
+}
