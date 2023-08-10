@@ -18,7 +18,9 @@ const express = require('express');
 const mainRouter = require("./routes/routes")
 const server = express();
 const PORT = 3001;
+const cors = require ("cors")
 
+server.use(cors())
 
 server.use((req, res, next) => {
    res.header('Access-Control-Allow-Origin', '*');
