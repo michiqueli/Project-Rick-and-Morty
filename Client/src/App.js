@@ -17,8 +17,6 @@ function App() {
    const [access, setAccess] = useState(false);
    const location = useLocation();
    const navigate = useNavigate();
-   const EMAIL = "michiqueli@gmail.com";
-   const PASSWORD = "Nico1234";
 
    function login(userData) {
       const { email, password } = userData;
@@ -26,7 +24,7 @@ function App() {
       axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
          const { access } = data;
          setAccess(data);
-         access && navigate('/home');
+         access && navigate('/home')
       });
    }
    

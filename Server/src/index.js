@@ -34,14 +34,9 @@ server.use((req, res, next) => {
    next();
 });
 
-server.use(express.json())
+server.use (express.json())
 
-server.use ((req, res, next) => {
-   req.url = '/rickandmorty' + req.url;
-   next();
- });
-
-server.use(mainRouter)
+server.use ('/rickandmorty', mainRouter)
 
 server.listen(PORT, () => {
    console.log('Server raised in port: ' + PORT);
