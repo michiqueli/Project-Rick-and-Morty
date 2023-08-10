@@ -54,7 +54,7 @@ export const addFav = (character) => {
         payload: data,
       });
     } catch (error) {
-      console.error('Error adding favorite:', error);
+      window.alert('Error adding favorite:', error);
     }
   };
 };
@@ -70,7 +70,7 @@ export const removeFav = (id) => {
         payload: data,
       });
     } catch (error) {
-      console.error('Error removing favorite:', error);
+      window.alert('Error removing favorite:', error);
     }
   };
 };
