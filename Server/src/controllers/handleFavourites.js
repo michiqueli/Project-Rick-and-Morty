@@ -1,16 +1,15 @@
-var myFavourites = [];
+const db = require ("../utils/favs")
 
-const postFav = (req, res) => {
-    myFavourites.push(req.body)
-    res(200, json(myFavourites))
+const save = (newFav) => {
+    db.push(newFav)
+    return db
 }
 
-const deleteFav = (req, res) => {
-    const {id} = req.params
-    myFavourites.filter(fav => fav.id == id)
-    res(200, json(myFavourites))
+const deleteFav = (id) => {
+   db = db.filter(fav => fav.id !== parseInt(id))
+   return db;
 }
 
 module.exports = {
-    postFav, deleteFav
+    save, deleteFav
 }

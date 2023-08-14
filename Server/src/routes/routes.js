@@ -1,5 +1,5 @@
 const getCharById = require ("../controllers/getCharById")
-const {postFav, deleteFav} = require ("../controllers/handleFavourites")
+const {save , deleteFav} = require ("../controllers/handleFavourites")
 const login = require ("../controllers/login")
 
 const express = require ("express");
@@ -9,8 +9,8 @@ mainRouter.get("/character/:id", getCharById)
 
 mainRouter.get("/login", login)
 
-mainRouter.post("/fav", postFav)
+mainRouter.post("/Favourites", save)
 
-mainRouter.delete("/fav/:id", deleteFav)
+mainRouter.delete("/Favourites/:id", deleteFav)
 
 module.exports = mainRouter
