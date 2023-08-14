@@ -1,4 +1,4 @@
-const db = require ("../utils/favs")
+var myFavourites = [];
 
 const postFav = (req, res) => {
     myFavourites.push(req.body)

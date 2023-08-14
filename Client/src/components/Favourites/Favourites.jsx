@@ -45,6 +45,9 @@ function Favourites({myFavourites}) {
                     id={fav.id}
                     name={fav.name}
                     image={fav.image}
+                    species={fav.species}
+                    gender={fav.gender}
+                    origin={fav.origin}
                     onClose={fav.onClose}
                     />
             ))}</div></></>
