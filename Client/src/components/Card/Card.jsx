@@ -9,17 +9,17 @@ export function Card({onClose, name, image, id, gender, addFav, removeFav, myFav
    console.log(myFavourites)
    useEffect(() => {
       myFavourites.forEach((fav) => {
-         if (fav.id === id) {
+         if (fav.id == id) {
             setIsFav(true);
          }
       });
-   },[myFavourites]);
+   },[myFavourites, id]);
 
    const handleFavourite = () => {
       if(isFav){
          setIsFav(false)
          removeFav(id)
-      }else if(!isFav){
+      }else {
          setIsFav(true)
          addFav({name:name, id:id, onClose:onClose, image:image, gender:gender})
       }

@@ -60,7 +60,7 @@ export const addFav = (character) => {
 };
 
 export const removeFav = (id) => {
-  const endpoint = 'http://localhost:3001/rickandmorty/fav/' + id;
+  const endpoint = 'http://localhost:3001/rickandmorty/fav' + id;
   return async (dispatch) => {
     try {
       const response = await axios.delete(endpoint);
@@ -79,7 +79,7 @@ export const filterFav = (gender) => {
   const payload = gender === "All genders" ? null : gender;
   return {
     type: FILTER_FAV,
-    payload: gender,
+    payload: payload,
   };
 };
 
