@@ -17,16 +17,6 @@ export const addFav = (character) => {
 };
 
 export const removeFav = (id) => {
-<<<<<<< HEAD
-  const endpoint = 'http://localhost:3001/rickandmorty/fav/' + id;
-  return (dispatch) => {
-     axios.delete(endpoint).then(({ data }) => {
-        return dispatch({
-           type: 'REMOVE_FAV',
-           payload: data,
-     });
-     });
-=======
   const endpoint = 'http://localhost:3001/rickandmorty/fav' + id;
   return async (dispatch) => {
     try {
@@ -39,7 +29,6 @@ export const removeFav = (id) => {
     } catch (error) {
       window.alert('Error removing favorite:', error);
     }
->>>>>>> 0afac1c3fa150778aa93409f4af402410ad22d12
   };
 };
 
