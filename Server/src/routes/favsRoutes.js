@@ -1,10 +1,10 @@
 const express = require ("express")
 const router = express.Router()
-const { save, deleteFav } = require ("../controllers/handleFavourites")
+const { postFav, deleteFav } = require ("../controllers/handleFavourites")
 
 router.post("/", (req, res) => {
     let newFav = req.body
-    res.status(200).json(save(newFav))
+    res.status(200).json(postFav(newFav))
 })
 
 router.delete("/:id", (req, res) => {

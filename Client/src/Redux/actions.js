@@ -45,35 +45,27 @@ export const ORDER_FAV = "ORDER";
 
 export const addFav = (character) => {
   const endpoint = 'http://localhost:3001/rickandmorty/fav';
-  return async (dispatch) => {
-    try {
-      const response = await axios.post(endpoint, character);
-      const data = response.data;
+  return (dispatch) => {
+    axios.post(endpoint, character).then(({ data }) => {
       return dispatch({
         type: ADD_FAV,
         payload: data,
-      });
-    } catch (error) {
-      window.alert('Error adding favorite:', error);
-    }
-  };
-};
+    });
+  });
+}};
 
 export const removeFav = (id) => {
   const endpoint = 'http://localhost:3001/rickandmorty/fav' + id;
-  return async (dispatch) => {
-    try {
-      const response = await axios.delete(endpoint);
-      const data = response.data;
+  return (dispatch) => {
+      axios.delete(endpoint).then(({ data }) => {
       return dispatch({
-        type: REMOVE_FAV,
-        payload: data,
-      });
-    } catch (error) {
-      window.alert('Error removing favorite:', error);
-    }
-  };
+          type: REMOVE_FAV,
+          payload: data
+        })
+      })
+  }
 };
+
 
 export const filterFav = (gender) => {
   const payload = gender === "All genders" ? null : gender;
