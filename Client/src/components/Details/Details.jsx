@@ -27,7 +27,6 @@ export default function Details(){
                     <div className={style.img}><img src={character.image} alt='Imsage Not Found'></img></div>
                     <div className={style.stats}><b>Status:</b>{character.status}</div>
                     <div className={style.stats}><b>Species:</b>{character.species}</div>
-                    <div className={style.stats}><b>Species:</b>{character.species}</div>
                     <div className={style.stats}><b>Gender:</b>{character.gender}</div>
                     <div className={style.stats}><b>Origin:</b>{character.origin}</div>
                     
