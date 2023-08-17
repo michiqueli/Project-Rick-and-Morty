@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 export function Card({onClose, name, image, id, gender, addFav, removeFav, myFavourites}) {
    
    const [isFav, setIsFav] = useState(false)
-   console.log(myFavourites)
    useEffect(() => {
       myFavourites.forEach((fav) => {
          if (fav.id == id) {
