@@ -11,11 +11,17 @@ export default function About() {
             Henry studen since May 2023
             </h2>
             <h2 className={style.h2}>
-            M1 Aproved
+            M1 Pass
             </h2 >
             <h2 className={style.h2}>
-            M2 On Board
-            </h2>        
+            M2 Pass
+            </h2>
+            <h2 className={style.h2}>
+            M3 Pass
+            </h2>
+            <h2 className={style.h2}>
+            M4 On Board
+            </h2>             
         </div>
     )
 }
