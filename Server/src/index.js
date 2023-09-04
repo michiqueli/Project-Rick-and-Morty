@@ -1,25 +1,9 @@
-/*var http = require("http");
-const getCharacterById = require ('./controllers/getCharacterById')
-const getId = require ('./controllers/getCharacterId')
-const PORT = 3001;
-
-server.listen(PORT, () => {
-   console.log('Server raised in port: ' + PORT);
-});
-
-const server = http.createServer((req, res) =>{
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  getCharacterById(res, getId(req))
-  }).listen(PORT, "localhost");
-  
-module.exports = server;*/
-
 const express = require('express');
 const mainRouter = require("./routes/routes")
 const server = express();
 const PORT = 3001;
 const cors = require ("cors")
-
+const {conn, User} = require ('./DB_connection')
 server.use(cors())
 
 server.use((req, res, next) => {
@@ -40,6 +24,26 @@ server.use (express.json())
 
 server.use ('/rickandmorty', mainRouter)
 
-server.listen(PORT, () => {
+/*server.listen(PORT, () => {
    console.log('Server raised in port: ' + PORT);
-});
+});*/
+conn.sync({force: true})
+.then(() => {
+   server.listen(PORT, () => {
+      console.log(`Servidor en puerto ${PORT}`)
+   })
+})
+.then(async () => {
+   try{
+      const newUser = await User.create({
+         email: "Nico@mail.com",
+         password: "12345"
+      })
+   }catch (error) {
+      console.log(error)
+   }}
+
+)
+.catch(error => {
+   console.log(error)
+})
